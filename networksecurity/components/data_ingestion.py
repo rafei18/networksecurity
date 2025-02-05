@@ -99,9 +99,9 @@ class DataIngestion:
         
     def initiate_data_ingestion(self):
         try:
-            dataframe=self.export_collection_as_dataframe()
-            dataframe=self.export_data_into_feature_store(dataframe)
-            self.split_data_as_train_test(dataframe)
+            dataframe=self.export_collection_as_dataframe() # getting the data from mongodb
+            dataframe=self.export_data_into_feature_store(dataframe) # saving the data into CVS file 
+            self.split_data_as_train_test(dataframe) # spliting into train & test : ingested folder 
             dataingestionartifact=DataIngestionArtifact(trained_file_path=self.data_ingestion_config.training_file_path,
                                                         test_file_path=self.data_ingestion_config.testing_file_path)
             return dataingestionartifact
