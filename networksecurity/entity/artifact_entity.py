@@ -19,10 +19,10 @@ class DataValidationArtifact:
 @dataclass
 class DataTransformationArtifact:
     transformed_object_file_path: str
-    transformed_train_file_path: str
+    transformed_train_file_path: str 
     transformed_test_file_path: str
 
-"""
+
 
 @dataclass
 class ClassificationMetricArtifact:
@@ -35,4 +35,3 @@ class ModelTrainerArtifact:
     trained_model_file_path: str
     train_metric_artifact: ClassificationMetricArtifact
     test_metric_artifact: ClassificationMetricArtifact
-"""
