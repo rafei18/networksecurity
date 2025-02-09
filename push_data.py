@@ -37,7 +37,7 @@ class NetworkDataExtract():
         except Exception as e:
             raise NetworkSecurityException(e,sys)
         
-    def insert_data_mongodb(self,records,database,collection):# colection like table in sql
+    def insert_data_mongodb(self,records,database,collection):# 
         try:
             self.database=database
             self.collection=collection

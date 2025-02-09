@@ -29,6 +29,9 @@ from urllib.parse import urlparse
 #import dagshub
 #dagshub.init(repo_owner='krishnaik06', repo_name='networksecurity', mlflow=True)
 
+import dagshub
+dagshub.init(repo_owner='rafei18', repo_name='networksecurity', mlflow=True)
+
 #os.environ["MLFLOW_TRACKING_URI"]="https://dagshub.com/krishnaik06/networksecurity.mlflow"
 #os.environ["MLFLOW_TRACKING_USERNAME"]="krishnaik06"
 #os.environ["MLFLOW_TRACKING_PASSWORD"]="7104284f1bb44ece21e0e2adb4e36a250ae3251f"
@@ -98,12 +101,12 @@ class ModelTrainer:
                 'subsample':[0.6,0.7,0.75,0.85,0.9],
                 # 'criterion':['squared_error', 'friedman_mse'],
                 # 'max_features':['auto','sqrt','log2'],
-                'n_estimators': [8,16,32,64,128] #256
+                'n_estimators': [8,16,32,64] #128 256
             },
             "Logistic Regression":{},
             "AdaBoost":{
                 'learning_rate':[.1,.01,.001],
-                'n_estimators': [8,16,32,64,128] # 256
+                'n_estimators': [8,16,32,64,] # 128 256
             }
             
         }
@@ -141,7 +144,7 @@ class ModelTrainer:
         Network_Model=NetworkModel(preprocessor=preprocessor,model=best_model)
         save_object(self.model_trainer_config.trained_model_file_path,obj=NetworkModel)
         #model pusher
-        #save_object("final_model/model.pkl",best_model)
+        save_object("final_model/model.pkl",best_model)
         
 
         ## Model Trainer Artifact
@@ -154,13 +157,13 @@ class ModelTrainer:
         return model_trainer_artifact
 
 
-        
 
 
-       
-    
-    
-        
+
+
+
+
+
     def initiate_model_trainer(self)->ModelTrainerArtifact:
         try:
             train_file_path = self.data_transformation_artifact.transformed_train_file_path
