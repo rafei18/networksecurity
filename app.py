@@ -15,7 +15,7 @@ from networksecurity.pipeline.training_pipeline import TrainingPipeline
 
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI, File, UploadFile,Request
-from uvicorn import run as app_run
+from uvicorn import run as app_run # this one to be able to do : python app.py instead of uvicorn app:app --reload 
 from fastapi.responses import Response
 from starlette.responses import RedirectResponse
 import pandas as pd
