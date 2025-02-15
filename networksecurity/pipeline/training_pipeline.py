@@ -116,6 +116,7 @@ class TrainingPipeline:
             
             self.sync_artifact_dir_to_s3()
             self.sync_saved_model_dir_to_s3()
+            print("")
             
             return model_trainer_artifact
         except Exception as e:
