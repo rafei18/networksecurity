@@ -48,7 +48,7 @@ jobs:
       - name: Build, tag, and pudh image to Amazone ECR
         id: build-image
         env:
-          ECR_REGISTRY: ${{ srep.login-ecr.outputs.registry }}
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY_NAME }}
           IMAGE_TAG: latest
         run: |
