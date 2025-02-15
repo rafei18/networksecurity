@@ -29,6 +29,9 @@ This project is an end-to-end Machine Learning pipeline designed to detect phish
     *   Destination: MongoDB database.
     *   Objective: Store the transformed data in a database for easy access.
 
+
+![ETL](img/etl.png)
+
 4.  **Data Ingestion:**
     *   Source: MongoDB
     *   Objective: Load data from MongoDB for validation and transformation steps in preparation for training.
