@@ -44,5 +44,20 @@ jobs:
       - name: Login to Amazon ECR
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
+
+      - name: Build, tag, and pudh image to Amazone ECR
+        id: build-image
+        env:
+          ECR_REGISTRY: ${{ srep.login-ecr.outputs.registry }}
+          ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY_NAME }}
+          IMAGE_TAG: latest
+        run: |
+         # Buold a docker container and
+         # push it to ECR so that it can 
+         # be depoloyed to ECS
+
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+          echo "::set-output name=name::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
   
 
