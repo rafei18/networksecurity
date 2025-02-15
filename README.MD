@@ -30,7 +30,12 @@ This project is an end-to-end Machine Learning pipeline designed to detect phish
     *   Objective: Store the transformed data in a database for easy access.
 
 
-![ETL](img/etl.png)
+
+
+<p align="center">
+  <img src="img/etl.png" alt="ETL">
+</p>
+
 
 4.  **Data Ingestion:**
     *   Source: MongoDB
