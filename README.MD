@@ -78,6 +78,11 @@ This project is an end-to-end Machine Learning pipeline designed to detect phish
     *   Optimization Method: Hyperparameter tuning with GridSearchCV to find the best combination of hyperparameters for each model.
     *   Objective: Select the best model based on performance metrics (e.g., precision, recall, F1-score) on a validation set.
 
+<p align="center">
+  <img src="img/model_trainer.png" alt="Model Trainer pipeline">
+</p>
+
+
 8.  **Deployment:**
     *   Objective: Make the trained model accessible for detecting phishing attacks in real-time via a FastAPI API.
 
