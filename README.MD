@@ -86,6 +86,9 @@ This project is an end-to-end Machine Learning pipeline designed to detect phish
 8.  **Deployment:**
     *   Objective: Make the trained model accessible for detecting phishing attacks in real-time via a FastAPI API.
 
+<p align="center">
+  <img src="img/deployement.drawio.png" alt="Model Deployement Via AWS">
+</p>
 
 
 ## Architecture
