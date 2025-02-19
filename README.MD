@@ -51,14 +51,21 @@ This project is an end-to-end Machine Learning pipeline designed to detect phish
         *   Data drift detection to ensure that the training and inference data follow a similar distribution.
     *   Output: Data Validation Artifacts, indicating the validation status.
 <p align="center">
-  <img src="img/dataval.png" alt="Data Validation">
+  <img src="img/dataval.png" alt="Data Validation pipeline">
 </p>
 
 6.  **Data Transformation:**
     *   Objective: Prepare the data for model training by applying scaling or encoding transformations.
     *   Steps:
-        *   [Replace this item and describe the specific transformations applied to the features, e.g., StandardScaler for scaling, OneHotEncoder for categorical variables, etc.]
-    *   Output: Data Transformation Artifacts, containing the transformed data and the processor.pkl object needed to apply the same transformations to new data.
+        *   Apply specific transformations to the features, such as:
+            * StandardScaler for scaling numerical variables.
+            * Use an imputer (like SimpleImputer) to handle missing values.
+            * Apply the SMOTE technique to balance the classes in the training data.
+    *   Output: Data transformation artifacts, including the transformed data and the processor.pkl object needed to apply the same transformations to new data.
+<p align="center">
+  <img src="img/datatransformation.png" alt="Data Trasformation pipeline">
+</p>
+
 
 7.  **Model Training (Model Trainer):**
     *   Objective: Train a Machine Learning model to predict whether a URL is a phishing attack or not.
