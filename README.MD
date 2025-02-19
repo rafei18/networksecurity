@@ -50,6 +50,9 @@ This project is an end-to-end Machine Learning pipeline designed to detect phish
         *   Schema validation (ensuring the same number of features).
         *   Data drift detection to ensure that the training and inference data follow a similar distribution.
     *   Output: Data Validation Artifacts, indicating the validation status.
+<p align="center">
+  <img src="img/dataval.png" alt="Data Validation">
+</p>
 
 6.  **Data Transformation:**
     *   Objective: Prepare the data for model training by applying scaling or encoding transformations.
