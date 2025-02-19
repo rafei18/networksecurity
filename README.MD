@@ -40,6 +40,9 @@ This project is an end-to-end Machine Learning pipeline designed to detect phish
 4.  **Data Ingestion:**
     *   Source: MongoDB
     *   Objective: Load data from MongoDB for validation and transformation steps in preparation for training.
+<p align="center">
+  <img src="img/dataingestion.png" alt="Data Ingestion">
+</p>
 
 5.  **Data Validation:**
     *   Objective: Ensure data quality and detect potential problems that could affect model performance.
